@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
     background: radial-gradient(ellipse at center, #2d2d6a 0%, #191932 100%);
     color: #fff;
@@ -11,55 +13,70 @@ body {
     margin: 40px auto;
     padding: 24px;
     background: rgba(20,20,30,0.8);
-    border-radius: 16px;
+    border-radius: 0;
     box-shadow: 0 0 24px #000a;
     text-align: center;
 }
 
-.pixel-logo {
-    display: grid;
-    grid-template-columns: repeat(16, 12px);
-    grid-template-rows: repeat(16, 12px);
-    gap: 2px;
-    margin: 0 auto 24px auto;
-    width: max-content;
-}
-
-.pixel {
-    width: 12px;
-    height: 12px;
-    background: transparent;
-}
-
-.pixel.p-34, .pixel.p-35, .pixel.p-36, .pixel.p-37,
-.pixel.p-50, .pixel.p-51, .pixel.p-52, .pixel.p-53, .pixel.p-54, .pixel.p-55,
-.pixel.p-66, .pixel.p-67, .pixel.p-68, .pixel.p-69, .pixel.p-70, .pixel.p-71,
-.pixel.p-82, .pixel.p-83, .pixel.p-84, .pixel.p-85, .pixel.p-86, .pixel.p-87,
-.pixel.p-98, .pixel.p-99, .pixel.p-100, .pixel.p-101, .pixel.p-102, .pixel.p-103 {
-    background: #fff;
-    border-radius: 2px;
-}
-
-.pixel-title {
-    font-size: 1.5rem;
-    margin: 16px 0 8px 0;
-    letter-spacing: 2px;
-}
-
-.pixel-desc {
-    font-size: 1rem;
+.pixel-frame {
+    border: 4px solid #bfa046;
+    box-shadow:
+        0 0 0 8px #7c5c1e,
+        0 0 0 12px #fffbe6,
+        0 0 0 16px #bfa046;
+    border-radius: 0;
+    background: #18182a;
     margin-bottom: 24px;
 }
 
+.pixel-logo {
+    display: grid;
+    grid-template-columns: repeat(8, 16px);
+    grid-template-rows: repeat(8, 16px);
+    gap: 4px;
+    margin: 32px auto 24px auto;
+    width: max-content;
+    justify-content: center;
+}
+
+.pixel {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 0;
+}
+
+.pixel-title {
+    font-size: 1.2rem;
+    margin: 16px 0 8px 0;
+    letter-spacing: 2px;
+    font-family: 'Press Start 2P', monospace, cursive;
+}
+
+.pixel-desc {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+    font-family: 'Press Start 2P', monospace, cursive;
+}
+
+.pixel-content {
+    background: #18182a;
+    padding: 16px 0;
+    margin-bottom: 16px;
+}
+
 .pixel-section {
-    background: #222a;
-    border-radius: 8px;
+    background: #11131a;
+    border: 4px solid #bfa046;
+    box-shadow: 0 0 0 4px #7c5c1e;
+    border-radius: 0;
     padding: 16px;
     margin-top: 16px;
+    font-family: 'Press Start 2P', monospace, cursive;
 }
 
 .pixel-section h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 8px;
 }
 
@@ -72,60 +89,11 @@ body {
 
 .pixel-section li {
     margin-bottom: 4px;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
-.pixel-frame {
-    display: inline-block;
-    padding: 12px;
-    background:
-        linear-gradient(135deg, #bfa046 0%, #fffbe6 40%, #bfa046 100%);
-    border: 4px solid #bfa046;
-    box-shadow:
-        0 0 0 8px #7c5c1e,
-        0 0 0 12px #fffbe6,
-        0 0 0 16px #bfa046;
-    border-radius: 8px;
-    margin-bottom: 24px;
+/* إزالة أي border-radius من كل العناصر */
+* {
+    border-radius: 0 !important;
 }
-
-.pixel-avatar-frame {
-    display: inline-block;
-    padding: 8px;
-    background: #191932;
-    border: 3px solid #fffbe6;
-    box-shadow:
-        0 0 0 4px #bfa046,
-        0 0 0 8px #7c5c1e;
-    border-radius: 6px;
-    margin-bottom: 12px;
-}
-
-.pixel-socials {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin: 16px 0;
-}
-
-.pixel-social-icon {
-    width: 24px;
-    height: 24px;
-    display: grid;
-    grid-template-columns: repeat(6, 4px);
-    grid-template-rows: repeat(6, 4px);
-    gap: 1px;
-    background: transparent;
-}
-
-/* مثال: تويتر بكسل ارت (أزرق وأبيض) */
-.pixel-social-icon.twitter .p {
-    background: #1da1f2;
-}
-.pixel-social-icon.twitter .p.eye {
-    background: #fff;
-}
-
-/* Optional: Import a pixel font */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
