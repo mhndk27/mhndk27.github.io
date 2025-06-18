@@ -19,11 +19,11 @@ body {
 }
 
 .pixel-frame {
-    border: 4px solid #bfa046;
+    border: 4px solid #2e4d3a; /* أخضر غامق */
     box-shadow:
-        0 0 0 8px #7c5c1e,
-        0 0 0 12px #fffbe6,
-        0 0 0 16px #bfa046;
+        0 0 0 8px #18332a,      /* أغمق */
+        0 0 0 12px #4fa08d,     /* أخضر مزرق فاتح */
+        0 0 0 16px #2e4d3a;     /* نفس لون الإطار */
     border-radius: 0;
     background: #18182a;
     margin-bottom: 24px;
@@ -67,8 +67,8 @@ body {
 
 .pixel-section {
     background: #11131a;
-    border: 4px solid #bfa046;
-    box-shadow: 0 0 0 4px #7c5c1e;
+    border: 4px solid #2e4d3a;
+    box-shadow: 0 0 0 4px #18332a;
     border-radius: 0;
     padding: 16px;
     margin-top: 16px;
