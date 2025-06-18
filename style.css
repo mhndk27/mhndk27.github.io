@@ -19,14 +19,35 @@ body {
 }
 
 .pixel-frame {
-    border: 4px solid #2e4d3a; /* أخضر غامق */
-    box-shadow:
-        0 0 0 8px #18332a,      /* أغمق */
-        0 0 0 12px #4fa08d,     /* أخضر مزرق فاتح */
-        0 0 0 16px #2e4d3a;     /* نفس لون الإطار */
+    position: relative;
+    padding: 40px 32px; /* عدل حسب سماكة الإطار في الصورة */
+    background: none;
+    border: none;
+    background-image: url('pixel-border.png'); /* ضع صورة الإطار هنا */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: none;
     border-radius: 0;
-    background: #18182a;
     margin-bottom: 24px;
+    z-index: 1;
+}
+.pixel-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    /* زخرفة بكسل ارت حول الإطار باستخدام SVG pattern */
+    border-radius: 0;
+    background: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="12" height="12" fill="none"/><rect x="0" y="0" width="2" height="12" fill="%233a2952"/><rect x="10" y="0" width="2" height="12" fill="%233a2952"/><rect x="0" y="0" width="12" height="2" fill="%233a2952"/><rect x="0" y="10" width="12" height="2" fill="%233a2952"/><rect x="2" y="2" width="8" height="8" fill="none" stroke="%232a1b3d" stroke-width="2"/></svg>');
+    background-repeat: repeat;
+    /* يجعل الإطار حول العنصر فقط */
+    mask-image: linear-gradient(#fff 0 0);
+    -webkit-mask-image: linear-gradient(#fff 0 0);
+}
+.pixel-frame > * {
+    position: relative;
+    z-index: 2;
 }
 
 .pixel-logo {
@@ -66,9 +87,12 @@ body {
 }
 
 .pixel-section {
-    background: #11131a;
-    border: 4px solid #2e4d3a;
-    box-shadow: 0 0 0 4px #18332a;
+    background: #18182a;
+    border: 4px solid #2a1b3d;
+    box-shadow:
+        0 0 0 2px #1a1024,
+        0 0 0 6px #3a2952,
+        0 0 0 8px #1a1024;
     border-radius: 0;
     padding: 16px;
     margin-top: 16px;
