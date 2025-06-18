@@ -1,1 +1,80 @@
+body {
+    background: radial-gradient(ellipse at center, #222 0%, #111 100%);
+    color: #fff;
+    font-family: 'Press Start 2P', monospace, cursive;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 24px;
+    background: rgba(20,20,30,0.8);
+    border-radius: 16px;
+    box-shadow: 0 0 24px #000a;
+    text-align: center;
+}
+
+.pixel-logo {
+    display: grid;
+    grid-template-columns: repeat(16, 12px);
+    grid-template-rows: repeat(16, 12px);
+    gap: 2px;
+    margin: 0 auto 24px auto;
+    width: max-content;
+}
+
+.pixel {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+}
+
+.pixel.p-34, .pixel.p-35, .pixel.p-36, .pixel.p-37,
+.pixel.p-50, .pixel.p-51, .pixel.p-52, .pixel.p-53, .pixel.p-54, .pixel.p-55,
+.pixel.p-66, .pixel.p-67, .pixel.p-68, .pixel.p-69, .pixel.p-70, .pixel.p-71,
+.pixel.p-82, .pixel.p-83, .pixel.p-84, .pixel.p-85, .pixel.p-86, .pixel.p-87,
+.pixel.p-98, .pixel.p-99, .pixel.p-100, .pixel.p-101, .pixel.p-102, .pixel.p-103 {
+    background: #fff;
+    border-radius: 2px;
+}
+
+.pixel-title {
+    font-size: 1.5rem;
+    margin: 16px 0 8px 0;
+    letter-spacing: 2px;
+}
+
+.pixel-desc {
+    font-size: 1rem;
+    margin-bottom: 24px;
+}
+
+.pixel-section {
+    background: #222a;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.pixel-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.pixel-section ul {
+    list-style: square inside;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.pixel-section li {
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+}
+
+/* Optional: Import a pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
